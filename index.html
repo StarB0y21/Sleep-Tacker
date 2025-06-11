@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت خواب</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+
+<body dir="rtl">
+    <div id="main-page">
+        <div id="sleep-section">
+            <form id="sleep-data-form">
+                <p id="date-title">تاریخ:</p>
+                <label class="date-input-label" for="date-input-year">سال:</label>
+                <input class="date-input" type="number" name="date-input-year" id="date-input-year" min="1404"
+                    max="1500" value="1404" />
+                <label class="date-input-label" for="date-input-month">ماه:</label>
+                <input class="date-input" type="number" name="date-input-month" id="date-input-month" min="1" max="12"
+                    value="1" />
+                <label class="date-input-label" for="date-input-day">روز:</label>
+                <input class="date-input" type="number" name="date-input-day" id="date-input-day" min="1" max="31"
+                    value="1" />
+
+                <hr>
+                <br>
+
+                <label class="sleep-input-label" for="sleep-time-input">ساعت خواب: </label>
+                <input class="sleep-input-time" type="number" name="sleep-time-input" id="sleep-time-input" min="0"
+                    max="23" step="1" value="0" />
+                <label class="sleep-input-label" for="yesterday-checkbox-input">روز قبل</label>
+                <input class="sleep-input-time" type="checkbox" name="yesterday-checkbox-input"
+                    id="yesterday-checkbox-input" />
+                <br>
+                <label class="sleep-input-label" for="wakeup-time-input">ساعت بیداری: </label>
+                <input class="sleep-input-time" type="number" name="wakeup-time-input" id="wakeup-time-input" min="0"
+                    max="23" step="1" value="0" />
+
+                <hr>
+                <br>
+
+                <label class="output-sleep-lable" for="show-sleep-time-input" style="pointer-events: none;">ساعت به خواب
+                    رفتن: </label>
+                <input class="output-sleep-input" type="text" name="show-sleep-time-input" id="show-sleep-time-input"
+                    readonly style="pointer-events: none;" />
+                <i class="output-sleep-i">_</i>
+                <label class="output-sleep-lable" for="show-wakeup-time-input" style="pointer-events: none;">ساعت بیداش
+                    شدن از خواب: </label>
+                <input class="output-sleep-input" type="text" name="show-wakeup-time-input" id="show-wakeup-time-input"
+                    readonly style="pointer-events: none;" />
+                <br>
+                <label class="output-sleep-lable" for="show-sleep-input" style="pointer-events: none;">ساعت بیداش شدن از
+                    خواب: </label>
+                <input class="output-sleep-input" type="text" name="show-sleep-input" id="show-sleep-input" readonly
+                    style="pointer-events: none;" />
+
+                <br>
+
+                <button id="submit-sleep-data-button">ثبت</button>
+            </form>
+
+        </div>
+    </div>
+    <div id="description">
+        <p>Creator: <a href="https://github.com/StarB0y21/">StarB0y21</a></p>
+        <p>License: MIT</p>
+    </div>
+</body>
+
+</html>

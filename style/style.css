@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #c5c5e7;
+}
+
+html,
+body,
+#sleep-sectionbody {
+    width: 100%;
+    height: 100%;
+}
+
+#main-page,
+#sleep-section {
+    border: 1px solid #464653;
+    border-radius: 20px;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #1e1e24;
+    font-family: system-ui;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-page {
+    width: 520px;
+    height: 250px;
+    background-color: #2b2a32;
+}
+
+#sleep-section {
+    background-color: #34343d;
+}
+
+#date-title {
+    width: fit-content;
+    height: fit-content;
+    font-size: 22px;
+}
+
+.date-input,
+.sleep-input-time {
+    color: #e9e9f6;
+    width: 53px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    border: 1px solid rgba(1, 1, 1, 0.2);
+    border-radius: 5px;
+    padding: 1px;
+    margin: 0;
+}
+
+#date-input-month,
+#date-input-day,
+.sleep-input-time {
+    width: 33px;
+}
+
+#yesterday-checkbox-input {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 3px;
+}
+
+.output-sleep-input {
+    pointer-events: none;
+    width: 30px;
+    height: 20px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(1, 1, 1, 0.1);
+}
+
+.output-sleep-lable {
+    pointer-events: none;
+    word-spacing: -2px;
+}
+
+#submit-sleep-data-button {
+    width: 60px;
+    height: 30px;
+    border: 1px solid #464653;
+    background-color: #6a6a7d;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+#submit-sleep-data-button:hover {
+    background-color: #838395;
+    cursor: pointer;
+}
+
+#submit-sleep-data-button:active {
+    background-color: #9191a1;
+    color: white;
+}
+
+
+
+#description {
+    direction: ltr;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
