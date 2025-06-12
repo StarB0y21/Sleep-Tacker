@@ -6,60 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مدیریت خواب</title>
     <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" defer></script>
     <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
 </head>
 
 <body dir="rtl">
     <div id="main-page">
         <div id="sleep-section">
-            <form id="sleep-data-form">
-                <p id="date-title">تاریخ:</p>
-                <label class="date-input-label" for="date-input-year">سال:</label>
-                <input class="date-input" type="number" name="date-input-year" id="date-input-year" min="1404"
-                    max="1500" value="1404" />
-                <label class="date-input-label" for="date-input-month">ماه:</label>
-                <input class="date-input" type="number" name="date-input-month" id="date-input-month" min="1" max="12"
-                    value="1" />
-                <label class="date-input-label" for="date-input-day">روز:</label>
-                <input class="date-input" type="number" name="date-input-day" id="date-input-day" min="1" max="31"
-                    value="1" />
+            <p id="date-title">تاریخ:</p>
+            <label class="date-input-label" for="date-input-year">سال:</label>
+            <input class="date-input" type="number" name="date-input-year" id="date-input-year" min="1404" max="1500"
+                value="1404" />
+            <label class="date-input-label" for="date-input-month">ماه:</label>
+            <!-- <input class="date-input" type="number" name="date-input-month" id="date-input-month" min="1" max="12" value="1" /> -->
+            <select name="date-input-month" id="date-input-month">
+                <option value="01">01 (فروردین)</option>
+                <option value="02">02 (اردیبهشت)</option>
+                <option value="03">03 (خرداد)</option>
+                <option value="04">04 (تیر)</option>
+                <option value="05">05 (مرداد)</option>
+                <option value="06">06 (شهریور)</option>
+                <option value="07">07 (مهر)</option>
+                <option value="08">08 (آبان)</option>
+                <option value="09">09 (آذر)</option>
+                <option value="10">10 (دی)</option>
+                <option value="11">11 (بهمن)</option>
+                <option value="12">12 (اسفند)</option>
+            </select>
 
-                <hr>
-                <br>
+            <label class="date-input-label" for="date-input-day">روز:</label>
+            <!-- <input class="date-input" type="number" name="date-input-day" id="date-input-day" min="1" max="31" value="1" /> -->
+             <select name="date-input-day" id="date-input-day">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+             </select>
 
-                <label class="sleep-input-label" for="sleep-time-input">ساعت خواب: </label>
-                <input class="sleep-input-time" type="number" name="sleep-time-input" id="sleep-time-input" min="0"
-                    max="23" step="1" value="0" />
-                <label class="sleep-input-label" for="yesterday-checkbox-input">روز قبل</label>
-                <input class="sleep-input-time" type="checkbox" name="yesterday-checkbox-input"
-                    id="yesterday-checkbox-input" />
-                <br>
-                <label class="sleep-input-label" for="wakeup-time-input">ساعت بیداری: </label>
-                <input class="sleep-input-time" type="number" name="wakeup-time-input" id="wakeup-time-input" min="0"
-                    max="23" step="1" value="0" />
+            <hr>
+            <br>
 
-                <hr>
-                <br>
+            <label class="sleep-input-label" for="sleep-time-input">ساعت خواب: </label>
+            <select name="sleep-time-input" id="sleep-time-input">
+                <option value="00">00</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+            </select>
+            <label class="sleep-input-label" for="yesterday-checkbox-input">روز قبل</label>
+            <input class="sleep-input-time" type="checkbox" name="yesterday-checkbox-input" id="yesterday-checkbox-input" />
+            <br>
+            <label class="sleep-input-label" for="wakeup-time-input">ساعت بیداری: </label>
+            <select name="wakeup-time-input" id="wakeup-time-input">
+                <option value="00">00</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+            </select>
 
-                <label class="output-sleep-lable" for="show-sleep-time-input" style="pointer-events: none;">ساعت به خواب
-                    رفتن: </label>
-                <input class="output-sleep-input" type="text" name="show-sleep-time-input" id="show-sleep-time-input"
-                    readonly style="pointer-events: none;" />
-                <i class="output-sleep-i">_</i>
-                <label class="output-sleep-lable" for="show-wakeup-time-input" style="pointer-events: none;">ساعت بیداش
-                    شدن از خواب: </label>
-                <input class="output-sleep-input" type="text" name="show-wakeup-time-input" id="show-wakeup-time-input"
-                    readonly style="pointer-events: none;" />
-                <br>
-                <label class="output-sleep-lable" for="show-sleep-input" style="pointer-events: none;">ساعت بیداش شدن از
-                    خواب: </label>
-                <input class="output-sleep-input" type="text" name="show-sleep-input" id="show-sleep-input" readonly
-                    style="pointer-events: none;" />
+            <hr>
+            <br>
 
-                <br>
+            <button id="submit-sleep-data-button" onclick="sendData()">ثبت</button>
 
-                <button id="submit-sleep-data-button">ثبت</button>
-            </form>
+            <br>
+            <br>
+            <hr>
+
+            <p id="avg-title">میانگین:</p>
+            <label class="output-sleep-lable" for="show-sleep-time-input" style="pointer-events: none;">ساعت به خواب
+                رفتن: </label>
+            <input class="output-sleep-input" type="text" name="show-sleep-time-input" id="show-sleep-time-input"
+                readonly style="pointer-events: none;" />
+            <i class="output-sleep-i">_</i>
+            <label class="output-sleep-lable" for="show-wakeup-time-input" style="pointer-events: none;">ساعت بیداش
+                شدن از خواب: </label>
+            <input class="output-sleep-input" type="text" name="show-wakeup-time-input" id="show-wakeup-time-input"
+                readonly style="pointer-events: none;" />
+            <br>
+            <label class="output-sleep-lable" for="show-sleep-input" style="pointer-events: none;">ساعت بیدارش شدن از
+                خواب: </label>
+            <input class="output-sleep-input" type="text" name="show-sleep-input" id="show-sleep-input" readonly
+                style="pointer-events: none;" />
+
+            <br>
 
         </div>
     </div>

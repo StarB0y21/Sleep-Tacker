@@ -31,7 +31,7 @@ body {
 
 #main-page {
     width: 520px;
-    height: 250px;
+    height: 300px;
     background-color: #2b2a32;
 }
 
@@ -61,7 +61,24 @@ body {
 #date-input-month,
 #date-input-day,
 .sleep-input-time {
-    width: 33px;
+    width: 100px;
+}
+
+
+#sleep-time-input *,
+#wakeup-time-input *,
+#date-input-month *,
+#date-input-day * {
+    background-color: #34343d;
+    background: #34343d;
+}
+
+#sleep-time-input,
+#wakeup-time-input,
+#date-input-month,
+#date-input-day {
+    background-color: #34343d;
+    background: #34343d;
 }
 
 #yesterday-checkbox-input {
@@ -69,6 +86,10 @@ body {
     height: 15px;
     padding: 0;
     margin: 3px;
+}
+
+#avg-title {
+    font-size: 19px;
 }
 
 .output-sleep-input {
